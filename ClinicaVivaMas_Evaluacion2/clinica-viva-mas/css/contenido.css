@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25-05-2015, 06:16:41 AM
+    Author     : Osvaldo
+*/
+
+.reserva, .consulta {
+    width: 600px;
+    text-align: justify;
+}
+
+#ajaxLoading {
+    visibility: hidden;
+    position:relative;
+    left: 400px;
+    top:50px;
+}
+
+.areaPaciente {
+    height: 50px;
+}
+
+.areaSelectores {
+    width: 100%;
+}
+
+.areaSelectores label {
+    position: relative;
+    left: 50px;
+    top: 25px;
+}
+
+.areaBotones {
+    text-align:right;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.areaConsulta table {
+    width:100%;
+    border: 1px solid #9EABFF;
+    text-align: center;
+}
+
+.areaConsulta th {
+    border: 1px solid #9EABFF;
+    text-align: center;
+    color:white;
+    background-color:#9EABFF; 
+}
+
+.areaConsulta td.vacia {
+    border-top: 1px solid #9EABFF;
+    text-align: center;
+}
+
+select, #fecha {
+    display: block;
+    width:250px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+

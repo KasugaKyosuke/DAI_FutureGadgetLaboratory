@@ -1,0 +1,96 @@
+html,body {       /* la etiqueta html también recibe el mismo estilo que el body */
+    margin:0;     /* espacio de la página con los bordes del navegador */
+    padding:0;    /* espacio del contenido de la página con el border del body */
+    height:100%;  /* altura de la página igual al máximo que tenga la ventana  */
+}
+#masterpage {
+    height:100%;       /* altura de todo el alto de la página */    
+    position:relative; /* posicion relativa */
+}
+header {
+    background-color: #9EABFF; /* color de fondo*/
+    height:100px;      /* altura fija */
+    color:white;       /* color del texto */
+    font-weight: bold; /* grosor del texto */
+    font-size:2.5em;   /* tamaño de la letra */
+    text-align:center; /* alineación del texto */
+    padding-top:10px;  /* espacio del contenido desde el borde superior */
+}
+
+header h3 {
+    position:relative;
+    bottom:30px;
+}
+
+menu {
+    width: 250px;     /* ancho de la barra de menú */
+    max-width: 250px; /* ancho máximo de la barra de menú */
+    background-color: lightyellow; /* color de fondo */       
+    float: left;      /* ubica a la izquierda, flotando, el área de menú */
+    margin: 0;        /* sin márgenes desde los elementos a sus lados */    
+    padding: 0px;     /* sin espacios desde sus bordes */ 
+    min-height: calc(100% - 160px); /* calcula la altura restando el header y footer */
+}
+menu a {
+    font-weight: bold; /* grosor del texto en el enlace del menú*/
+    color: darkblue;  /* color del texto en el enlace */
+    text-decoration: none; /* sin decoración, subrayado, en el link */
+}
+menu a:hover {
+    color: orange;  /* color del texto cuando el mouse se coloca encima */
+    text-decoration: underline; /* línea de subrayado al colocar el mouse encima */
+}
+menu li.actual {
+    font-weight: bold; /* grosor del texto para el menú actual */
+    color: orange;/* color del texto del item del menu actual */   
+}
+#contenido {
+    margin: 0 0 0 250px; /* sin márgenes salvo a la izquierda (el menú flotante) */
+    height: calc(100% - 190px);     /* altura del área de contenido */
+    max-height: calc(100% - 190px); /* altura máxima */ 
+    padding:20px 20px 0px 20px;     /* sin espacio sólo en la parte inferior */
+    border-left: 1px solid #9EABFF; /* borde derecho del área de menú */
+    overflow-y: auto; /* al superar el alto mostrar una barra de scroll */
+}
+footer {    
+   position:absolute; /* posición absoluta para que quede fijo abajo */
+   bottom:0;          /* margen inferior de cero */
+   width:100%;        /* ancho del footer */
+   height:60px;       /* altura del footer */			      
+   color:white;       /* color del texto */
+   text-align:center; /* alineación del texto */
+   background-color: #9EABFF; /* color de fondo */
+}
+section.error {    
+    margin: 10px 10px 10px 10px;  /* distancia desde los otros elementos hacia los bordes */ 
+    padding: 10px 35px 10px 35px; /* espacio desde los bordes hacia el contenido del bloque */
+    background-color: #F5E6E8; /* color de fondo */
+    border: 2px solid red; /* grosor y color de la línea del borde */
+    border-radius: 10px; /* curvatura de las esquinas del borde*/
+}
+section.error * {
+    color:red; /* color del texto del error */
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); /* sombra del texto */
+}
+
+#loginBar{
+    height: 25px;
+    border-bottom: 1px solid #9EABFF;
+    border-right: 1px solid #9EABFF;
+    border-bottom-right-radius: 15px;
+    width: 100%;
+    margin-top: -20px;
+    margin-left: -20px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+#loginBar a {
+    font-weight: bold; /* grosor del texto en el enlace del menú*/
+    color: darkblue;  /* color del texto en el enlace */
+    text-decoration: none; /* sin decoración, subrayado, en el link */
+}
+#loginBar a:hover {
+    color: orange;  /* color del texto cuando el mouse se coloca encima */
+    text-decoration: underline; /* línea de subrayado al colocar el mouse encima */
+}
