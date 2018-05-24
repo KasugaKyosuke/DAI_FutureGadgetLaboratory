@@ -4,12 +4,12 @@ if(isset($_GET['codigoEspecialidad']) && isset($_GET['codigoCentroMedico'])) {
     echo json_encode(getProfesionales($_GET['codigoEspecialidad'], $_GET['codigoCentroMedico']));
 }
 
-function getProfesionales($codigoEspecialidad, $codigoCentroMedico) {
+function getProfesionales($codigoEspecialidad, $codigoCentroMedico) {       
     $host = "localhost";
-    $user = "dbavivamas";
-    $password = "a1s2d3";
+    $user = "admin";
+    $password = "sa123";
     $database = "clinicavivamas";
-    $port = 3306;           
+    $port = 3306;
 
     $query = "SELECT p.id, p.nombres, p.apellidos
               FROM profesional p 

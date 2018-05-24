@@ -5,8 +5,8 @@ echo json_encode(getHorarios());
 
 function getHorarios() {
     $host = "localhost";
-    $user = "dbavivamas";
-    $password = "a1s2d3";
+    $user = "admin";
+    $password = "sa123";
     $database = "clinicavivamas";
     $port = 3306;           
 

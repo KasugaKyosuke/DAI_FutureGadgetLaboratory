@@ -6,7 +6,7 @@
  */
 
     $pagina = htmlentities($_SERVER['PHP_SELF']);
-    $paginas = array("inicio","reserva","consulta");
+    $paginas = array("inicio","reserva","consulta","mantenedor");
 
     $menuActual = "inicio";
 

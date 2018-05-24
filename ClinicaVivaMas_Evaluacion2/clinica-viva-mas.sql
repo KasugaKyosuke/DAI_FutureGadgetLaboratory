@@ -213,6 +213,50 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 INSERT INTO `usuario` (`email`, `clave`, `nombre`) VALUES
 ('dba@vivamas.com', PASSWORD('asdf'), 'Administrador');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla de relacion `rel_usuario_rolusuario`
+--
+
+CREATE TABLE IF NOT EXISTS `rel_usuario_rolusuario` (
+  `email` varchar(64) NOT NULL,
+  `id_tipo_usuario` int(11) NOT NULL,
+  PRIMARY KEY (`email`, `id_tipo_usuario`),
+  KEY `email` (`email`),
+  KEY `id_tipo_usuario` (`id_tipo_usuario`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `rel_usuario_rolusuario`
+--
+INSERT INTO `rel_usuario_rolusuario` (`email`, `id_tipo_usuario`) VALUES
+('dba@vivamas.com', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `rol_usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `rol_usuario` (
+  `id_tipo_usuario` int(11) NOT NULL,
+  `tipo_usuario` varchar(25) NOT NULL,
+  PRIMARY KEY (`id_tipo_usuario`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `rol_usuario`
+--
+
+INSERT INTO `rol_usuario` (`id_tipo_usuario`, `tipo_usuario`) VALUES
+(1, 'Usuario Administrador'),
+(2, 'Usuario Atencion'),
+(3, 'Usuario Consulta');
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
 --
 -- Restricciones para tablas volcadas
 --
@@ -237,6 +281,13 @@ ALTER TABLE `profesional`
 ALTER TABLE `reserva`
   ADD CONSTRAINT `reserva_ibfk_2` FOREIGN KEY (`hora`) REFERENCES `horario` (`id`),
   ADD CONSTRAINT `reserva_ibfk_1` FOREIGN KEY (`id_profesional`) REFERENCES `profesional` (`id`);
+  
+--
+-- Filtros para la tabla `rel_usuario_rolusuario`
+--
+ALTER TABLE `rel_usuario_rolusuario`
+  ADD CONSTRAINT `rel_uru_usuario` FOREIGN KEY (`email`) REFERENCES `usuario` (`email`),
+  ADD CONSTRAINT `rel_uru_rolusuario` FOREIGN KEY (`id_tipo_usuario`) REFERENCES `rol_usuario` (`id_tipo_usuario`);  
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

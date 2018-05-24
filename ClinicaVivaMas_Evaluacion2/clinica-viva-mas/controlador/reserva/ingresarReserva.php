@@ -6,8 +6,8 @@ if(isset($_POST['idPaciente']) && isset($_POST['idProfesional']) && isset($_POST
 
 function ingresarReserva($idPaciente, $idProfesional, $fecha, $hora) {
     $host = "localhost";
-    $user = "dbavivamas";
-    $password = "a1s2d3";
+    $user = "admin";
+    $password = "sa123";
     $database = "clinicavivamas";
     $port = 3306;           
 
