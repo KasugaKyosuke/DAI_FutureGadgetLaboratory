@@ -2,11 +2,10 @@
 <!--
 
 
-<section class="reserva">
+<section class="mantenedor">
     <b>Mantenedor de Usuarios</b>
     <p>
-        Seleccione a continuaci&oacute;n la especialidad, centro m&eacute;dico,
-        profesional y horario que m&aacute;s le acomode.
+        .
     </p>
     
     <div id="ajaxLoading">
