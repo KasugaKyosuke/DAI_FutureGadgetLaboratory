@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : Osvaldo
 */
 
-.reserva, .consulta {
+.reserva, .consulta, .mantenedor {
     width: 600px;
     text-align: justify;
 }
@@ -40,20 +40,20 @@ and open the template in the editor.
     margin-top: 20px;
 }
 
-.areaConsulta table {
+.areaConsulta table, .areaMantencion table {
     width:100%;
     border: 1px solid #9EABFF;
     text-align: center;
 }
 
-.areaConsulta th {
+.areaConsulta th, .areaMantencion th {
     border: 1px solid #9EABFF;
     text-align: center;
     color:white;
     background-color:#9EABFF; 
 }
 
-.areaConsulta td.vacia {
+.areaConsulta td.vacia, .areaMantencion td.vacia {
     border-top: 1px solid #9EABFF;
     text-align: center;
 }
@@ -66,3 +66,6 @@ select, #fecha {
     margin-right: auto;
 }
 
+#nuevo_usuario {
+    visibility: hidden;
+}
