@@ -35,17 +35,22 @@
                 <tr><td class="vacia" colspan="4">no hay registros</td></tr>
             </tbody>
         </table>
-        <p><button id="btn_agregar_usuario" >Agregar Usuario</button></p>
+        <p><button id="btn_agregar" >Agregar Usuario</button></p>
     </div>
     
     <div id="nuevo_usuario">    
-        <button id="btn_cerrar_div" >Cerrar</button>
-        <h2>Nuevo Usuario</h2>
+        <h3>Nuevo Usuario</h3>
         <hr>
         <input id="nuevo_email" name="nuevo_email" placeholder="Email" type="text">
         <input id="nuevo_nombre" name="nuevo_nombre" placeholder="Name" type="text">
         <input id="nuevo_pass" name="nuevo_pass" placeholder="Contraseña" type="password">
-        <a href="javascript:verificar()" id="submit">Guardar</a>
+        <select id="tipo_usuario" name="tipo_usuario">
+            <option value="" disabled="">-- Seleccionar Tipo Usuario --</option>
+        </select>
+        <div class="areaBotones">
+            <input id="btn_cerrar" type="button" value="Cerrar" name="btn_cerrar" />
+            <input id="btn_guardar" type="button" value="Guardar" name="btn_guardar" />
+        </div>
     </div>
 
 </section>

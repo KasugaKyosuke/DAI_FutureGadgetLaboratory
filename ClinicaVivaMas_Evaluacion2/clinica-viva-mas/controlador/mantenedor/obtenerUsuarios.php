@@ -8,7 +8,18 @@ function getUsuarios() {
     $password = "sa123";
     $database = "clinicavivamas";
     $port = 3306;           
-
+/*
+    $query = "  SELECT  usu.email,
+                        usu.nombre,
+                        uusu.clave,
+                        rol.tipo_usuario,
+                        rol.id_tipo_usuario
+                FROM    usuario usu,
+                        rel_usuario_rolusuario rur,
+                        rol_usuario rol
+                WHERE   usu.email = rur.email
+                AND     rur.id_tipo_usuario = rol.id_tipo_usuario";
+    */
     $query = "  SELECT  usu.email,
                         usu.nombre,
                         rol.tipo_usuario
@@ -29,6 +40,7 @@ function getUsuarios() {
 
     $db->set_charset("utf8");
     $stmt = $db->prepare($query);
+    //$stmt->bind_result($email,$nombre,$clave,$idtipousuario,$tipousuario);
     $stmt->bind_result($email,$nombre,$tipousuario);
     
     $resultado = $stmt->execute();
@@ -36,11 +48,15 @@ function getUsuarios() {
    
     if($resultado != false) {        
         while( $stmt->fetch() ){ 
-            array_push($usuarios, Array("email"=>$email,
+            /*array_push($usuarios, Array("email"=>$email,
+                                        "nombre"=>$nombre,
+                                        "clave"=>$clave,
+                                        "idtipousuario"=>$idtipousuario,
+                                        "tipousuario"=>$tipousuario));*/
+                        array_push($usuarios, Array("email"=>$email,
                                         "nombre"=>$nombre,
                                         "tipousuario"=>$tipousuario));
         } 
     }
-    
     return $usuarios;
 }

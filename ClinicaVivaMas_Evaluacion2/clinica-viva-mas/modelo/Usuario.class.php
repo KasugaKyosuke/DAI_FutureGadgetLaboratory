@@ -4,7 +4,6 @@ class Usuario {
     private $nombre;
     private $clave;
     private $email;    
-    
    
     function __construct($nombre, $clave, $email) {
         $this->nombre = $nombre;
@@ -35,5 +34,4 @@ class Usuario {
     function setEmail($email) {
         $this->email = $email;
     }
-
 }
